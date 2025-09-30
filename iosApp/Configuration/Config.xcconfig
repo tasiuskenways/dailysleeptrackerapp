@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=DailySleepTracker
+PRODUCT_BUNDLE_IDENTIFIER=my.id.tasius.dailysleeptracker.DailySleepTracker$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
