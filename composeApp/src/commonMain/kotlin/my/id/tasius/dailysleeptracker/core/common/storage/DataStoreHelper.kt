@@ -2,6 +2,10 @@ package my.id.tasius.dailysleeptracker.core.common.storage
 
 import kotlinx.serialization.KSerializer
 
+/**
+ * Interface for interacting with DataStore.
+ * Provides methods to get and set String, Boolean, and generic object values.
+ */
 interface DataStoreHelper {
     suspend fun getString(key: String): String?
     suspend fun setString(key: String, value: String)

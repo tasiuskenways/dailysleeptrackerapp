@@ -11,4 +11,7 @@ object Screen {
 
     @Serializable
     object Dashboard
+
+    @Serializable
+    object Boarding
 }
