@@ -15,3 +15,13 @@ android {
         }
     }
 }
+
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation(projects.core.common)
+            implementation(projects.core.network)
+            implementation(projects.feature.splashscreen)
+        }
+    }
+}
