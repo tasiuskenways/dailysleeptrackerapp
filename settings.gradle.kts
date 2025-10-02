@@ -30,3 +30,6 @@ dependencyResolutionManagement {
 
 include(":composeApp")
 includeBuild("build-logic")
+include(":core:common")
+include(":core:network")
+include(":feature:splashscreen")
