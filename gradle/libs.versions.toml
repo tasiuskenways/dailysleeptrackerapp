@@ -72,3 +72,5 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 dailysleeptracker-composeapp = { id = "dailysleeptracker.composeapp" }
+dailysleeptracker-feature = { id = "dailysleeptracker.feature" }
+dailysleeptracker-core = { id = "dailysleeptracker.core" }

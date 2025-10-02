@@ -29,5 +29,13 @@ gradlePlugin {
             id = "dailysleeptracker.composeapp"
             implementationClass = "my.id.tasius.dailysleeptracker.buildlogic.ComposeAppConventionPlugin"
         }
+        register("featureConvention") {
+            id = "dailysleeptracker.feature"
+            implementationClass = "my.id.tasius.dailysleeptracker.buildlogic.FeatureConventionPlugin"
+        }
+        register("coreConvention") {
+            id = "dailysleeptracker.core"
+            implementationClass = "my.id.tasius.dailysleeptracker.buildlogic.CoreConventionPlugin"
+        }
     }
 }
