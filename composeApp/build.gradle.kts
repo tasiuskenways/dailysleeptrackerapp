@@ -35,5 +35,5 @@ kotlin {
 kotzilla {
     versionName = "1.0"
     keyGeneration = KotzillaKeyGeneration.COMPOSE
-    composeInstrumentation = true
+    composeInstrumentation = false
 }
