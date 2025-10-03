@@ -1,6 +1,7 @@
 package my.id.tasius.navigation
 
 import androidx.navigation.NavController
+import androidx.navigation.NavGraph.Companion.findStartDestination
 
 /**
  * Navigate and clear the entire back stack.
@@ -12,7 +13,7 @@ import androidx.navigation.NavController
 fun NavController.navigateAndClearBackStack(destination: Screen) {
     navigate(destination) {
         // Pop everything including the current destination
-        popUpTo(graph.id) {
+        popUpTo(graph.findStartDestination().id) {
             inclusive = true
         }
         // Avoid multiple copies in back stack

@@ -1,6 +1,6 @@
 package my.id.tasius.splashscreen.data.repository
 
-import my.id.tasius.dailysleeptracker.core.common.storage.DataStoreHelper
+import my.id.tasius.common.storage.DataStoreHelper
 import my.id.tasius.splashscreen.domain.repository.SplashScreenRepository
 import my.id.tasius.splashscreen.utils.SplashConst
 
@@ -30,7 +30,7 @@ class SplashScreenRepositoryImpl(
      */
     override suspend fun getIsFirstRun(): Boolean {
         val isFirstRun = dataStoreHelper.getBoolean(SplashConst.IS_FIRST_RUN_LOCAL_KEY) ?: true
-        if (!isFirstRun) {
+        if (isFirstRun) {
             dataStoreHelper.setBoolean(SplashConst.IS_FIRST_RUN_LOCAL_KEY, false)
         }
         return isFirstRun

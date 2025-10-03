@@ -1,8 +1,8 @@
 package my.id.tasius.dailysleeptracker.di
 
-import my.id.tasius.dailysleeptracker.core.common.storage.DataStoreHelper
-import my.id.tasius.dailysleeptracker.core.common.storage.DataStoreHelperImpl
-import my.id.tasius.dailysleeptracker.core.network.provideHttpClient
+import my.id.tasius.common.storage.DataStoreHelper
+import my.id.tasius.common.storage.DataStoreHelperImpl
+import my.id.tasius.network.provideHttpClient
 import my.id.tasius.splashscreen.di.splashModule
 import org.koin.dsl.module
 

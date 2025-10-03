@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
-import my.id.tasius.dailysleeptracker.core.common.ui.model.UiState
+import my.id.tasius.common.model.UiState
 import my.id.tasius.splashscreen.domain.usecase.GetSplashStateUseCase
 import my.id.tasius.splashscreen.utils.SplashScreenState
 

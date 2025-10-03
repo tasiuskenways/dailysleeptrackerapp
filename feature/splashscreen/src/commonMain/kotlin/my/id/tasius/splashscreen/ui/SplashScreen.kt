@@ -17,7 +17,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import my.id.tasius.dailysleeptracker.core.common.ui.model.UiState
+import my.id.tasius.common.model.UiState
 import my.id.tasius.navigation.Screen
 import my.id.tasius.navigation.navigateAndClearBackStack
 import my.id.tasius.splashscreen.utils.SplashScreenState
