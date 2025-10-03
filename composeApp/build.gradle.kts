@@ -1,5 +1,8 @@
+import io.kotzilla.gradle.ext.KotzillaKeyGeneration
+
 plugins {
     alias(libs.plugins.dailysleeptracker.composeapp)
+    alias(libs.plugins.kotzilla)
 }
 
 android {
@@ -24,6 +27,13 @@ kotlin {
             implementation(projects.core.navigation)
             implementation(projects.feature.splashscreen)
             implementation(projects.feature.dashboard)
+            implementation(libs.kotzilla.sdk)
         }
     }
+}
+
+kotzilla {
+    versionName = "1.0"
+    keyGeneration = KotzillaKeyGeneration.COMPOSE
+    composeInstrumentation = false
 }

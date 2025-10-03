@@ -22,6 +22,7 @@ kotlinxSerializationJson = "1.9.0"
 kotlinStdlib = "2.2.20"
 runner = "1.5.2"
 core = "1.5.0"
+kotzilla = "1.2.2"
 
 [libraries]
 
@@ -69,6 +70,10 @@ kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", versio
 androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
 androidx-core = { group = "androidx.test", name = "core", version.ref = "core" }
 
+#Kotzilla
+kotzilla-sdk = { module = "io.kotzilla:kotzilla-sdk-compose", version.ref = "kotzilla" }
+kotzilla-ktor3 = { module = "io.kotzilla:kotzilla-sdk-ktor3", version.ref = "kotzilla" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -82,3 +87,4 @@ dailysleeptracker-feature = { id = "dailysleeptracker.feature" }
 dailysleeptracker-core = { id = "dailysleeptracker.core" }
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 android-lint = { id = "com.android.lint", version.ref = "agp" }
+kotzilla = { id = "io.kotzilla.kotzilla-plugin", version.ref = "kotzilla" }
