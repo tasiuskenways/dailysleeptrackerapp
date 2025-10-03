@@ -21,7 +21,9 @@ kotlin {
         commonMain.dependencies {
             implementation(projects.core.common)
             implementation(projects.core.network)
+            implementation(projects.core.navigation)
             implementation(projects.feature.splashscreen)
+            implementation(projects.feature.dashboard)
         }
     }
 }

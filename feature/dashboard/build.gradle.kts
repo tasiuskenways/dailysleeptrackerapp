@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "my.id.tasius.dailysleeptracker.feature.splashscreen"
+    namespace = "my.id.tasius.dailysleeptracker.feature.dashboard"
 }
 
 kotlin {
@@ -11,7 +11,6 @@ kotlin {
         commonMain.dependencies {
             implementation(projects.core.common)
             implementation(projects.core.network)
-            implementation(projects.core.navigation)
             implementation(libs.kotlinx.coroutines.core)
         }
     }
