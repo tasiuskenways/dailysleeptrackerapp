@@ -3,6 +3,7 @@ package my.id.tasius.dailysleeptracker.di
 import my.id.tasius.common.storage.DataStoreHelper
 import my.id.tasius.common.storage.DataStoreHelperImpl
 import my.id.tasius.network.provideHttpClient
+import my.id.tasius.network.provideKtorfit
 import my.id.tasius.splashscreen.di.splashModule
 import org.koin.dsl.module
 
@@ -12,6 +13,7 @@ import org.koin.dsl.module
  */
 fun appKoinModule() = module {
     single { provideHttpClient(mock = true) }
+    single { provideKtorfit(get()) }
     single<DataStoreHelper> { DataStoreHelperImpl() }
     includes(splashModule())
 }
