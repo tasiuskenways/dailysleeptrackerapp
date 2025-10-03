@@ -20,7 +20,4 @@ suspend inline fun <reified T> handleResponse(response: HttpResponse): NetworkRe
 
 suspend fun HttpResponse.safeBodyAsText(): String? =
     runCatching { bodyAsText() }
-        .onFailure { throwable ->
-            ""
-        }
-        .getOrNull()
+        .getOrElse { "" }
