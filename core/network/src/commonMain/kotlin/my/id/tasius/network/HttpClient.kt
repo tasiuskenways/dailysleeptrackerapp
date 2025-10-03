@@ -7,11 +7,11 @@ import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.request.accept
-import io.ktor.client.request.contentType
 import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.URLProtocol
+import io.ktor.http.contentType
 import io.ktor.http.headersOf
 import io.ktor.serialization.kotlinx.json.json
 
@@ -70,7 +70,7 @@ fun provideHttpClient(mock: Boolean = false): HttpClient = if (mock) {
         defaultRequest {
             url {
                 protocol = URLProtocol.HTTPS
-                host = "api.sleep.local" // later: real domain
+                host = NetworkConstant.BASE_HOST
             }
             contentType(ContentType.Application.Json)
             accept(ContentType.Application.Json)
