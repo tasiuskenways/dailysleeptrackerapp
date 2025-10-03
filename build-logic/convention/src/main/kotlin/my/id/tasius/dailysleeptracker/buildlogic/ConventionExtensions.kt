@@ -99,6 +99,7 @@ internal fun DependencyHandlerScope.addNetworkingDependencies(libs: VersionCatal
     commonMainImplementation(libs.requireLibrary("ktor.client.content.negotiation"))
     commonMainImplementation(libs.requireLibrary("ktor.client.mock"))
     commonMainImplementation(libs.requireLibrary("kotlinx.serialization.json"))
+    commonMainImplementation(libs.requireLibrary("ktorfit.lib"))
 }
 
 internal fun DependencyHandlerScope.addDataStoreDependencies(libs: VersionCatalog) {

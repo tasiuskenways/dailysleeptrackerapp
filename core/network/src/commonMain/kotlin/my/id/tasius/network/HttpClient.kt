@@ -6,6 +6,10 @@ import io.ktor.client.engine.mock.respond
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
+import io.ktor.client.request.accept
+import io.ktor.client.request.contentType
+import io.ktor.http.ContentType
+import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.URLProtocol
 import io.ktor.http.headersOf
@@ -20,22 +24,39 @@ import io.ktor.serialization.kotlinx.json.json
 fun provideHttpClient(mock: Boolean = false): HttpClient = if (mock) {
     HttpClient(MockEngine) {
         install(ContentNegotiation) { json() }
+        defaultRequest {
+            contentType(ContentType.Application.Json)
+            accept(ContentType.Application.Json)
+        }
         engine {
             addHandler { request ->
                 when {
                     request.url.encodedPath == "/v1/sessions" && request.method.value == "GET" -> {
                         respond(
                             content = """{"data":[${exampleSessionJson()}]}""",
-                            headers = headersOf("Content-Type" to listOf("application/json"))
+                            headers = headersOf(
+                                HttpHeaders.ContentType,
+                                listOf(ContentType.Application.Json.toString())
+                            )
                         )
                     }
                     request.url.encodedPath == "/v1/sessions" && request.method.value == "POST" -> {
-                        respond("""{"data": ${exampleSessionJson()}}""",
-                            headers = headersOf("Content-Type" to listOf("application/json")))
+                        respond(
+                            """{"data": ${exampleSessionJson()}}""",
+                            headers = headersOf(
+                                HttpHeaders.ContentType,
+                                listOf(ContentType.Application.Json.toString())
+                            )
+                        )
                     }
                     request.url.encodedPath.startsWith("/v1/goals") && request.method.value == "GET" -> {
-                        respond("""{"data":{"targetBedtime":"22:30","targetWakeTime":"06:30","minHoursPerNight":7.5}}""",
-                            headers = headersOf("Content-Type" to listOf("application/json")))
+                        respond(
+                            """{"data":{"targetBedtime":"22:30","targetWakeTime":"06:30","minHoursPerNight":7.5}}""",
+                            headers = headersOf(
+                                HttpHeaders.ContentType,
+                                listOf(ContentType.Application.Json.toString())
+                            )
+                        )
                     }
                     else -> respond("""{"error":"Not Found"}""", HttpStatusCode.NotFound)
                 }
@@ -51,6 +72,8 @@ fun provideHttpClient(mock: Boolean = false): HttpClient = if (mock) {
                 protocol = URLProtocol.HTTPS
                 host = "api.sleep.local" // later: real domain
             }
+            contentType(ContentType.Application.Json)
+            accept(ContentType.Application.Json)
         }
     }
 }
