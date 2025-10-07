@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import my.id.tasius.common.model.UiState
 import my.id.tasius.dailysleeptracker.core.designsystem.theme.DailySleepThemeValues
+import my.id.tasius.dailysleeptracker.core.designsystem.theme.Drawable
 import my.id.tasius.splashscreen.utils.SplashScreenState
-import my.id.tasius.dailysleeptracker.core.designsystem.generated.resources.Res
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -56,7 +56,7 @@ fun SplashScreen(
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(Res.drawable.sleepicon),
+            painter = painterResource(Drawable.Icon),
             contentDescription = null,
             contentScale = ContentScale.Fit,
             modifier = Modifier
