@@ -15,15 +15,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import my.id.tasius.common.model.UiState
 import my.id.tasius.dailysleeptracker.core.designsystem.theme.DailySleepThemeValues
-import my.id.tasius.navigation.Screen
-import my.id.tasius.navigation.navigateAndClearBackStack
-import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
-import my.id.tasius.common.model.UiState
 import my.id.tasius.splashscreen.utils.SplashScreenState
 import org.koin.compose.viewmodel.koinViewModel
 
