@@ -37,5 +37,9 @@ gradlePlugin {
             id = "dailysleeptracker.core"
             implementationClass = "my.id.tasius.dailysleeptracker.buildlogic.CoreConventionPlugin"
         }
+        register("designSystemConvention") {
+            id = "dailysleeptracker.designsystem"
+            implementationClass = "my.id.tasius.dailysleeptracker.buildlogic.DesignSystemConventionPlugin"
+        }
     }
 }
