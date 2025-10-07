@@ -87,6 +87,7 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 dailysleeptracker-composeapp = { id = "dailysleeptracker.composeapp" }
 dailysleeptracker-feature = { id = "dailysleeptracker.feature" }
 dailysleeptracker-core = { id = "dailysleeptracker.core" }
+dailysleeptracker-designsystem = { id = "dailysleeptracker.designsystem" }
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 android-lint = { id = "com.android.lint", version.ref = "agp" }
 kotzilla = { id = "io.kotzilla.kotzilla-plugin", version.ref = "kotzilla" }

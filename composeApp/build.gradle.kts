@@ -25,6 +25,7 @@ kotlin {
             implementation(projects.core.common)
             implementation(projects.core.network)
             implementation(projects.core.navigation)
+            implementation(projects.core.designsystem)
             implementation(projects.feature.splashscreen)
             implementation(projects.feature.dashboard)
             implementation(libs.kotzilla.sdk)
