@@ -12,6 +12,7 @@ kotlin {
             implementation(projects.core.common)
             implementation(projects.core.network)
             implementation(projects.core.designsystem)
+            implementation(projects.core.navigation)
             implementation(libs.kotlinx.coroutines.core)
         }
     }

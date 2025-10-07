@@ -21,12 +21,15 @@ import my.id.tasius.common.model.UiState
 import my.id.tasius.dailysleeptracker.core.designsystem.theme.DailySleepThemeValues
 import my.id.tasius.navigation.Screen
 import my.id.tasius.navigation.navigateAndClearBackStack
+import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import my.id.tasius.common.model.UiState
 import my.id.tasius.splashscreen.utils.SplashScreenState
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun SplashScreen(
-    navController: NavController,
+    onFinishLoading: (SplashScreenState) -> Unit,
     splashScreenVM: SplashScreenVM = koinViewModel()
 ) {
 
@@ -37,19 +40,13 @@ fun SplashScreen(
     LaunchedEffect(splashState) {
         when(val state = splashState) {
             is UiState.Success -> {
-                val screenDestination = when(state.data) {
-                    SplashScreenState.LOGGED_IN -> Screen.Dashboard
-                    SplashScreenState.FIRST_RUN -> Screen.Boarding
-                    SplashScreenState.LOGGED_OUT -> Screen.Login
-                }
-
-                navController.navigateAndClearBackStack(screenDestination)
+                onFinishLoading(state.data)
             }
             UiState.Loading -> {
                 alpha.animateTo(1f, animationSpec = tween(durationMillis = 1000))
             }
             else -> {
-                navController.navigateAndClearBackStack(Screen.Login)
+                onFinishLoading(SplashScreenState.LOGGED_OUT)
             }
         }
     }
