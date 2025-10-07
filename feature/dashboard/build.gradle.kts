@@ -11,6 +11,7 @@ kotlin {
         commonMain.dependencies {
             implementation(projects.core.common)
             implementation(projects.core.network)
+            implementation(projects.core.designsystem)
             implementation(libs.kotlinx.coroutines.core)
         }
     }
