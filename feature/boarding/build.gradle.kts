@@ -1,0 +1,19 @@
+plugins {
+    alias(libs.plugins.dailysleeptracker.feature)
+}
+
+android {
+    namespace = "my.id.tasius.dailysleeptracker.feature.boarding"
+}
+
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation(projects.core.common)
+            implementation(projects.core.network)
+            implementation(projects.core.navigation)
+            implementation(projects.core.designsystem)
+            implementation(libs.kotlinx.coroutines.core)
+        }
+    }
+}

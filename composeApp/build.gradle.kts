@@ -28,6 +28,7 @@ kotlin {
             implementation(projects.core.designsystem)
             implementation(projects.feature.splashscreen)
             implementation(projects.feature.dashboard)
+            implementation(projects.feature.boarding)
             implementation(libs.kotzilla.sdk)
         }
     }

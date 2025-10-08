@@ -6,8 +6,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -59,9 +58,7 @@ fun SplashScreen(
             painter = painterResource(Drawable.Icon),
             contentDescription = null,
             contentScale = ContentScale.Fit,
-            modifier = Modifier
-                .width(DailySleepThemeValues.spacing.huge * 2)
-                .height(DailySleepThemeValues.spacing.huge * 2)
+            modifier = Modifier.size(DailySleepThemeValues.spacing.huge * 2)
         )
     }
 
